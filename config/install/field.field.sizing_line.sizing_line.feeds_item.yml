@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sizing_line.feeds_item
+  module:
+    - feeds
+    - project_sizing
+id: sizing_line.sizing_line.feeds_item
+field_name: feeds_item
+entity_type: sizing_line
+bundle: sizing_line
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

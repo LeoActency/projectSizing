@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.sizing_line.sizing_line.feeds_item
     - field.field.sizing_line.sizing_line.field_description
     - field.field.sizing_line.sizing_line.field_size
   module:
@@ -26,6 +27,13 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: -4
@@ -43,4 +51,5 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true

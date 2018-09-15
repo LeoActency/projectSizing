@@ -5,4 +5,8 @@ core: 8.x
 dependencies:
   - feeds
   - field
+  - project_sizing
+  - search_api
+  - search_api_solr
   - user
+  - views

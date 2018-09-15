@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.sizing_line.sizing_line.feeds_item
     - field.field.sizing_line.sizing_line.field_description
     - field.field.sizing_line.sizing_line.field_size
   module:
@@ -45,4 +46,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true
+  langcode: true
