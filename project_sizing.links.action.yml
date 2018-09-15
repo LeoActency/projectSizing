@@ -1,0 +1,5 @@
+entity.sizing_line.add_form:
+  route_name: entity.sizing_line.add_form
+  title: 'Add Sizing line'
+  appears_on:
+    - entity.sizing_line.collection

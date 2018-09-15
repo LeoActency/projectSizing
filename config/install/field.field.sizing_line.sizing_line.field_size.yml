@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sizing_line.field_size
+  module:
+    - project_sizing
+id: sizing_line.sizing_line.field_size
+field_name: field_size
+entity_type: sizing_line
+bundle: sizing_line
+label: Size
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

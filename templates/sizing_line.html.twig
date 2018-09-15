@@ -1,0 +1,22 @@
+{#
+/**
+ * @file sizing_line.html.twig
+ * Default theme implementation to present Sizing line data.
+ *
+ * This template is used when viewing Sizing line pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_sizing_line()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('sizing_line') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

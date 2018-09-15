@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sizing_line.sizing_line.field_description
+    - field.field.sizing_line.sizing_line.field_size
+  module:
+    - project_sizing
+label: 'Sizing line'
+id: sizing_line
+description: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ;
+  no_headers: false
+  line_limit: 100
+processor: 'entity:sizing_line'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: false
+  skip_hash_check: false
+  values: {  }
+custom_sources:
+  name:
+    label: Name
+    value: Name
+    machine_name: name
+  description:
+    label: Description
+    value: Description
+    machine_name: description
+  size:
+    label: Size
+    value: Size
+    machine_name: size
+mappings:
+  -
+    target: name
+    map:
+      value: name
+    unique:
+      value: '1'
+  -
+    target: field_description
+    map:
+      value: description
+  -
+    target: field_size
+    map:
+      value: size

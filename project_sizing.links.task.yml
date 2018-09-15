@@ -1,0 +1,22 @@
+# Sizing line routing definition
+sizing_line.settings_tab:
+  route_name: sizing_line.settings
+  title: 'Settings'
+  base_route: sizing_line.settings
+
+entity.sizing_line.canonical:
+  route_name: entity.sizing_line.canonical
+  base_route: entity.sizing_line.canonical
+  title: 'View'
+
+entity.sizing_line.edit_form:
+  route_name: entity.sizing_line.edit_form
+  base_route: entity.sizing_line.canonical
+  title: 'Edit'
+
+entity.sizing_line.delete_form:
+  route_name:  entity.sizing_line.delete_form
+  base_route:  entity.sizing_line.canonical
+  title: Delete
+  weight: 10
+

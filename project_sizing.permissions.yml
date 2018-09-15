@@ -1,0 +1,19 @@
+add sizing line entities:
+  title: 'Create new Sizing line entities'
+
+administer sizing line entities:
+  title: 'Administer Sizing line entities'
+  description: 'Allow to access the administration form to configure Sizing line entities.'
+  restrict access: true
+
+delete sizing line entities:
+  title: 'Delete Sizing line entities'
+
+edit sizing line entities:
+  title: 'Edit Sizing line entities'
+
+view published sizing line entities:
+  title: 'View published Sizing line entities'
+
+view unpublished sizing line entities:
+  title: 'View unpublished Sizing line entities'

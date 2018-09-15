@@ -1,0 +1,14 @@
+
+# Sizing line menu items definition
+entity.sizing_line.collection:
+  title: 'Sizing line list'
+  route_name: entity.sizing_line.collection
+  description: 'List Sizing line entities'
+  parent: system.admin_structure
+  weight: 100
+
+sizing_line.admin.structure.settings:
+  title: 'Sizing line settings'
+  description: 'Configure Sizing line entities'
+  route_name: sizing_line.settings
+  parent: system.admin_structure

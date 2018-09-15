@@ -1,0 +1,8 @@
+name: Project Sizing
+type: module
+description: 'Tools for project sizing'
+core: 8.x
+dependencies:
+  - feeds
+  - field
+  - user
