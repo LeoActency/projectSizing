@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sizing_line.field_consumed
+  module:
+    - project_sizing
+id: sizing_line.sizing_line.field_consumed
+field_name: field_consumed
+entity_type: sizing_line
+bundle: sizing_line
+label: Consumed
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

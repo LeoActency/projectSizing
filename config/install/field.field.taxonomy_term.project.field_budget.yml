@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_budget
+    - taxonomy.vocabulary.project
+  module:
+    - options
+id: taxonomy_term.project.field_budget
+field_name: field_budget
+entity_type: taxonomy_term
+bundle: project
+label: Budget
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

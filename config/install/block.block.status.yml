@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.status
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: status
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:status'
+settings:
+  id: 'facet_block:status'
+  label: Status
+  provider: facets
+  label_display: visible
+  block_id: status
+visibility:
+  request_path:
+    id: request_path
+    pages: /project-sizing
+    negate: false
+    context_mapping: {  }

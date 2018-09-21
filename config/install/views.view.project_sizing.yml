@@ -2,7 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.sizing_line.field_consumed
     - field.storage.sizing_line.field_description
+    - field.storage.sizing_line.field_project
     - field.storage.sizing_line.field_size
     - search_api.index.sizing_line
   module:
@@ -99,6 +101,83 @@ display:
       row:
         type: search_api
       fields:
+        field_project:
+          id: field_project
+          table: search_api_datasource_sizing_line_entity_sizing_line
+          field: field_project
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Project
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              project:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+          entity_type: sizing_line
+          plugin_id: search_api_field
         name:
           id: name
           table: search_api_datasource_sizing_line_entity_sizing_line
@@ -326,6 +405,91 @@ display:
               - '@count'
           entity_type: sizing_line
           plugin_id: search_api_field
+        field_consumed:
+          id: field_consumed
+          table: search_api_datasource_sizing_line_entity_sizing_line
+          field: field_consumed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Consumed
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+            decimal_separator: .
+            scale: 2
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_numeric
+          fallback_options:
+            set_precision: false
+            precision: 0
+            decimal: .
+            separator: ','
+            format_plural: false
+            format_plural_string: !!binary MQNAY291bnQ=
+            prefix: ''
+            suffix: ''
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            format_plural_values:
+              - '1'
+              - '@count'
+          entity_type: sizing_line
+          plugin_id: search_api_field
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -387,7 +551,9 @@ display:
         - url
         - url.query_args
       tags:
+        - 'config:field.storage.sizing_line.field_consumed'
         - 'config:field.storage.sizing_line.field_description'
+        - 'config:field.storage.sizing_line.field_project'
         - 'config:field.storage.sizing_line.field_size'
   page_1:
     display_plugin: page
@@ -397,6 +563,10 @@ display:
     display_options:
       display_extenders: {  }
       path: project-sizing
+      cache:
+        type: none
+      defaults:
+        cache: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -405,5 +575,7 @@ display:
         - url
         - url.query_args
       tags:
+        - 'config:field.storage.sizing_line.field_consumed'
         - 'config:field.storage.sizing_line.field_description'
+        - 'config:field.storage.sizing_line.field_project'
         - 'config:field.storage.sizing_line.field_size'

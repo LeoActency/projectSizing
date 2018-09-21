@@ -3,7 +3,9 @@ status: true
 dependencies:
   config:
     - field.field.sizing_line.sizing_line.feeds_item
+    - field.field.sizing_line.sizing_line.field_consumed
     - field.field.sizing_line.sizing_line.field_description
+    - field.field.sizing_line.sizing_line.field_project
     - field.field.sizing_line.sizing_line.field_size
   module:
     - project_sizing
@@ -12,6 +14,13 @@ targetEntityType: sizing_line
 bundle: sizing_line
 mode: default
 content:
+  field_consumed:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_description:
     weight: 7
     settings:
@@ -19,6 +28,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_project:
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_size:
     weight: 6

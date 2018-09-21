@@ -2,7 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.sizing_line.sizing_line.field_consumed
     - field.field.sizing_line.sizing_line.field_description
+    - field.field.sizing_line.sizing_line.field_project
     - field.field.sizing_line.sizing_line.field_size
   module:
     - project_sizing
@@ -42,6 +44,14 @@ custom_sources:
     label: Size
     value: Size
     machine_name: size
+  consumed:
+    label: Consumed
+    value: Consumed
+    machine_name: consumed
+  project:
+    label: Project
+    value: Project
+    machine_name: project
 mappings:
   -
     target: name
@@ -57,3 +67,14 @@ mappings:
     target: field_size
     map:
       value: size
+  -
+    target: field_consumed
+    map:
+      value: consumed
+  -
+    target: field_project
+    map:
+      target_id: project
+    settings:
+      reference_by: name
+      autocreate: false
