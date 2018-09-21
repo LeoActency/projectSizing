@@ -64,11 +64,6 @@ field_settings:
         - field.storage.taxonomy_term.field_version
       module:
         - taxonomy
-  name:
-    label: Name
-    datasource_id: 'entity:sizing_line'
-    property_path: name
-    type: text
 datasource_settings:
   'entity:sizing_line': {  }
 processor_settings:
